@@ -1,6 +1,16 @@
 {
-  "extends": ["development"],
+  "extends": [
+    "development"
+  ],
   "hints": {
-    "compat-api/css": ["error", { "ignore": ["@layer"] }]
+    "compat-api/css": [
+      "error",
+      {
+        "ignore": [
+          "@layer"
+        ]
+      }
+    ],
+    "typescript-config/is-valid": "off"
   }
 }
