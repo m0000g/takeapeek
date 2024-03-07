@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
-import { Poppins as FontSans } from 'next/font/google';
+import { Inter as FontSans } from 'next/font/google';
 import { cn } from '@/lib/utils';
-import '@/styles/globals.css';
+import './globals.css';
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   subsets: ['latin'],
-  weight: '400',
   variable: '--font-sans',
 });
 
@@ -18,9 +17,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang='en'>
       <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
-        <div className='header'>Header</div>
         <main>{children}</main>
-        <div className='footer'>Footer</div>
       </body>
     </html>
   );

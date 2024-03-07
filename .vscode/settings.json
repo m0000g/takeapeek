@@ -1,6 +1,10 @@
 {
-  "css.customData": [".vscode/css_custom_data.json"],
+  "css.customData": [
+    ".vscode/css_custom_data.json"
+  ],
   "files.associations": {
     "*.css": "tailwindcss"
-  }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

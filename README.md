@@ -85,3 +85,26 @@ c. Install Tailwind CSS IntelliSense extensions for VSCode, adding that to the `
 }
 
 ```
+
+# Fast Refresh (hot reload) issue?
+- Documentation: <https://nextjs.org/docs/architecture/fast-refresh>
+- Problem: Changing page.tsx doesn't trigger fast reload.
+- Can't see "[Fast Refresh] rebuilding" on console (Maybe is not available in this version?)
+
+`package.json`
+
+```
+    "next": "14.1.0",
+    "react": "^18",
+```
+
+Similar complains:
+- <https://github.com/vercel/next.js/issues/51162>
+- According to this link Downgrading to Next v 13.2 solves the issue.: <https://github.com/vercel/next.js/issues/57046#issue-1951896689>
+
+What I hava done
+- Fixed node version to '20.11.1'
+- Remove `.next` and `node_modules` folders, nothing happends.
+- Downgrade to 13.2, no dice.
+- Using `// @refresh reset` inside page.tsx, nada.
+- Try to emulate exactly the files from the instalation, since I changed the font and location of the globals.css while coding <https://ui.shadcn.com/docs/installation/next>
