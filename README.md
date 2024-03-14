@@ -34,3 +34,38 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Running the first time afer clonning?
+
+Install dependencies with `npm install`
+
+## Experimenting issues after changing dependencies?
+
+Try to delete these foldes: `node_modules` and `.next`
+
+
+## Extra configurations
+
+Let's avoid linters maring @layer and @taiwind with the following error messages
+- Unknown at rule @tailwindcss(unknownAtRules)
+- '@layer' is not supported by Chrome, Chrome Android, Edge, Opera, Samsung Internet.
+
+### Instructions
+
+1. Create the folder `.vscode`
+2. Create this file `settings.json` inside `.vscode`
+3. Add the following configuration inside `settings.json`
+
+```
+{
+  "css.customData": [".vscode/css_custom_data.json"],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
+}
+```
+
+4. Create file  `.hintrc` on root folder
+5. Add the following configuration
+
+```
